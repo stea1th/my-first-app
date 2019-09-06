@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Input, Component} from '@angular/core';
+import {ServerComponent} from './server/server.component';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,15 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  condition = true;
+  @Input() condition = true;
+  num: number;
+  @Input() stat: string;
+
 
   toggle() {
     this.condition = !this.condition;
+    // Math.floor(Math.random() * 10) + 1;
+    // this.stat = this.condition ? 'online' : 'offline';
   }
 
 }

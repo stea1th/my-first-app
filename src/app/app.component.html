@@ -4,7 +4,8 @@
       <h3><strong>Hi, its me, your Tzar :)</strong></h3>
       <hr/>
       <app-servers></app-servers>
-<!--      <button (click)="show =!show"></button>-->
+      <button (click)="toggle()"> {{ condition }} </button>
+      <br/><br/>
       <ng-container *ngIf="condition; else elseBlock">
         <app-success-alert ></app-success-alert>
       </ng-container>

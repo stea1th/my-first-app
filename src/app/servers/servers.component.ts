@@ -12,6 +12,8 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created';
   serverName = 'Puki Server';
+  serverCreated = false;
+  servers = ['Testserver', 'Testserver 2'];
 
   constructor() {
     setTimeout(() => {
@@ -23,8 +25,10 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer(evt: MouseEvent) {
-    console.log(evt.button);
-    this.serverCreationStatus = 'Server was created ' + this.serverName;
+    // console.log(evt.button);
+    // this.serverCreationStatus = 'Server was created ' + this.serverName;
+    this.serverCreated = true;
+    this.servers.push(this.serverName);
   }
 
   // onUpdateServerName(evt: any) {

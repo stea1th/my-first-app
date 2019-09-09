@@ -1,0 +1,6 @@
+<hr>
+
+<input type="text" class="form-control" [(ngModel)]="username" (input)="observeInput()">
+<p>Username is: {{username}}</p>
+<button class="btn btn-info" [disabled]="isBtnDisabled" (click) = clearUserName()>Clear username</button>
+<hr>

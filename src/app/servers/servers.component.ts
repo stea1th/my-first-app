@@ -24,7 +24,7 @@ export class ServersComponent implements OnInit {
 
   onCreateServer(evt: MouseEvent) {
     console.log(evt.button);
-    this.serverCreationStatus = 'Server was created';
+    this.serverCreationStatus = 'Server was created ' + this.serverName;
   }
 
   // onUpdateServerName(evt: any) {

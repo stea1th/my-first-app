@@ -7,22 +7,12 @@ import {Component, OnInit} from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  private username: string;
-  private isBtnDisabled: boolean;
+  username = '';
 
   constructor() {
   }
 
   ngOnInit() {
-    this.username = '';
-    this.isBtnDisabled = true;
   }
 
-  clearUserName() {
-    this.ngOnInit();
-  }
-
-  observeInput() {
-    this.isBtnDisabled = this.username === '';
-  }
 }
